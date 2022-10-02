@@ -99,7 +99,7 @@ def main():
 
 
 #bonus 
-def bonus(input)
+def bonus(input):
     if input is True:
         return input
     else:
