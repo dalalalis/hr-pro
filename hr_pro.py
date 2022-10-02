@@ -59,8 +59,10 @@ def list_ofmanagers ():
 def main():
     options=["Show Employees","Show Managers","Add An Employee","Add A Manager"
 	"Exit"]
+
     print ("Welcome to HR Pro")
     print ("options")
+
     index=1
     for option in options:
         print (index, option)
@@ -68,7 +70,9 @@ def main():
 
     choose= input("What would you like to do?")
     print (choose)
+
     print ("---------------------------------")
+
     if choose== 1:
         print (list_employee())
         return True
@@ -91,25 +95,20 @@ def main():
         employment_years= input("how many years of managment?")
         bonus_percentage= input("bonus percentage?")
         manager_add= Manager(name, age, salary, employment_years, bonus_percentage)
-        list_ofmanagers.append(employee_add)
-        print (employee_add)
+        list_ofmanagers.append(manager_add)
+        print (manager_add)
         return True
     else:
         return False
 
 
 #bonus 
-def bonus(input):
-    if input is True:
+def bonus(result):
+    if result is True:
         return input
     else:
         print ("program off")
 
+bonus(main())
 
 
-
-#
-# if __name__ == '__main__':
-
-
-print (def main())
