@@ -71,8 +71,10 @@ def main():
     print ("---------------------------------")
     if choose== 1:
         print (list_employee)
+        return True
     elif choose==2:
         print (list_ofmanagers)
+        return True
     elif choose==3:
         name= input("whats the employees name?")
         age= input("whats the employees age?")
@@ -81,7 +83,8 @@ def main():
         employee_add= Employee(name, age, salary, employment_years)
         list_employee.append(employee_add)
         print (employee_add)
-    else:
+        return True
+    elif choose==4
         name= input("whats the manager name?")
         age= input("whats the manager age?")
         salary= input(" whats the manager salary?")
@@ -90,9 +93,17 @@ def main():
         manager_add= Manager(name, age, salary, employment_years, bonus_percentage)
         list_ofmanagers.append(employee_add)
         print (employee_add)
+        return True
+    else:
+        return False
 
 
-
+#bonus 
+def bonus(input)
+    if input is True:
+        return input
+    else:
+        print ("program off")
 
 
 
