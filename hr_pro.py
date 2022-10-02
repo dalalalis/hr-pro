@@ -44,7 +44,7 @@ class Manager(Employee):
         print (f"{super().__str__()} bonus {bonus}")
 
 def list_ofmanagers ():
-    listofmangers:[]
+    listofmangers=[]
     manager_one= Manager("ahmed", 40, 500, 10, 0.8)
     manager_two=Manager("laila", 20, 400, 3, 0.9)
     listofmangers.append(manager_one, manager_two)
@@ -70,10 +70,10 @@ def main():
     print (choose)
     print ("---------------------------------")
     if choose== 1:
-        print (list_employee)
+        print (list_employee())
         return True
     elif choose==2:
-        print (list_ofmanagers)
+        print (list_ofmanagers())
         return True
     elif choose==3:
         name= input("whats the employees name?")
@@ -84,7 +84,7 @@ def main():
         list_employee.append(employee_add)
         print (employee_add)
         return True
-    elif choose==4
+    elif choose==4:
         name= input("whats the manager name?")
         age= input("whats the manager age?")
         salary= input(" whats the manager salary?")
