@@ -45,7 +45,8 @@ def list_ofmanagers ():
     listofmangers=[]
     manager_one= Manager("ahmed", 40, 500, 10, 0.8)
     manager_two=Manager("laila", 20, 400, 3, 0.9)
-    listofmangers.append(manager_one, manager_two)
+    listofmangers.append(manager_one)
+    listofmangers.append(manager_two)
     return (listofmangers)
 
 
@@ -56,30 +57,32 @@ def list_ofmanagers ():
 
 
 def main():
-    options=["Show Employees","Show Managers","Add An Employee","Add A Manager"
-	"Exit"]
-    listofmanagers= list_ofmanagers ()
-    listofemployee= list_employee () 
+    
+        options=["Show Employees","Show Managers","Add An Employee","Add A Manager"
+	    "Exit"]
+        listofmanagers= []
+        listofemployee= []
 
-    print ("Welcome to HR Pro")
-    print ("options")
+        print ("Welcome to HR Pro")
+        print ("options")
 
-    index=1
-    for option in options:
-        print (index, option)
-        index= index+1
+        index=1
+        for option in options:
+            print (index, option)
+            index= index+1
 
-    choose= input("What would you like to do?")
-    print (choose)
+        choose= int(input("What would you like to do?"))
+        print (choose)
 
-    print ("---------------------------------")
-    if choose== 1:
-            return (list_employee())
+        print ("---------------------------------")
+        if choose== 1:
+            return(list_employee)
+             
             
-    elif choose==2:
-            return (list_ofmanagers())
+        elif choose==2:
+            return (list_ofmanagers)
             
-    elif choose==3:
+        elif choose==3:
             name= input("whats the employees name?")
             age= input("whats the employees age?")
             salary= input(" whats the salary?")
@@ -88,7 +91,7 @@ def main():
             listofemployee.append(employee_add)
             return (employee_add)
             
-    elif choose==4:
+        elif choose==4:
             name= input("whats the manager name?")
             age= input("whats the manager age?")
             salary= input(" whats the manager salary?")
@@ -98,8 +101,8 @@ def main():
             listofmanagers.append(manager_add)
             return (manager_add)
         
-    else:
-        return ("programme off")  
+        else:
+            return ("programme off")  
 
 
 print (main())
